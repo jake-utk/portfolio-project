@@ -1,13 +1,11 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* I just did this so i didn't have to look at a white screen for hours */
+  background-image: url('https://i1.wp.com/travelwithme247blog.com/wp-content/uploads/2020/05/Sunset-Hin-Kong-Beach-Koh-Phangan_Veronika-TravelGeekery.jpg?resize=940%2C705&ssl=1');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: grid;
 }

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Tech NewsReader
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+- I am going to create a personal blog / portfolio that allows me to showcase my journey as I "learn to code" and move into the tech field. My components will be a home landing page, a blog page showing recent posts (posts will initially be housed on dev.to and API fetched from there) and a newsfeed of current trends in the tech industry via Hacker News API.
 
-In the project directory, you can run:
+## Project Link
 
-### `npm start`
+- To go here...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Big Notes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Hard push to early MVP, CSS/styling to begin after.  Workflow will first target the Home landing page + NewsReader, followed by the blog imports from dev.to.
 
-### `npm test`
+## User Stories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- As a user, I want a navigation bar on the landing page, so that I can move around the site.
+- As a user, I want to be able to display a list of current articles from Hacker News.
+- As a user, I want a selection of buttons that will read each topic, so I can select what to search.
 
-### `npm run build`
+## Bronze Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- As a user, I want to be able to search for topics via a searchbar, so I can query a wider variety of articles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Silver Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- As a user, I want to be able to navigate to a blog page, so I can read what the creator has written.
 
-### `npm run eject`
+## Gold Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- As a user, I want to be able to navigate to a page of that displays the creator's portfolio, in case I want to hire him.
+- As a user, I want to be able to click on each blog post title, so I can read the entire article. (dev.to API)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Wire Frame
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- ![initial wireframe](initial-wireframe.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Flow Chart
 
-## Learn More
+- ![initial flowchart](initial-flowchart.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- HTML
+- CSS
+- Javascript
 
-### Code Splitting
+## Installation Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Fork Repo
+- Clone it
+- To contribute please make pull request!
 
-### Analyzing the Bundle Size
+## Embedded App Screenshot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- TBD
 
-### Making a Progressive Web App
+## Unsolved Problems, Major Hurdles, and Reflections Along the Way...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- TBD
 
-### Advanced Configuration
+## Next Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- TBD
