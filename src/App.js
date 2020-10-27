@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
 import "./index.css";
 import Navigation from "./components/Navigation"
+import NewsReader from "./components/NewsReader"
 
 const App = () => {
 	return <div>
@@ -9,7 +10,7 @@ const App = () => {
       <Navigation />
     </header>
     <main>
-      NewsReeder will go here!
+      <NewsReader />
     </main>
     <footer>
       Small footer message...
