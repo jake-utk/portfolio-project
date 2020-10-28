@@ -1,9 +1,13 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom'
 
 const Navigation = () => {
     return (
-        <div>
-            This is the Navigation Bar!
+        <div className="navigation">
+            <h1>Hacker NewsReader</h1>
+            <nav>
+                <Link to={"/"}>Home</Link>
+            </nav>
         </div>
     );
 };

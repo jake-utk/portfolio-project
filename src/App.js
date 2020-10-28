@@ -11,19 +11,23 @@ const App = () => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log('json object: ', res);
+        console.log('json object: ', res);
         setNewsArticles(res.hits)
-        console.log(newsArticles);
 			});
 	}, []);
 
 	return (
-		<div>
+		<div className="App">
 			<header>
 				<Navigation />
 			</header>
 			<main>
-				<NewsReader />
+        <Route 
+        path='/'
+        exactrender={() => {
+          return <NewsReader newsArticles={newsArticles} setNewsArticles={setNewsArticles} />
+
+        }} />
 			</main>
 		</div>
 	);
