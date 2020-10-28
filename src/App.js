@@ -5,6 +5,18 @@ import Navigation from "./components/Navigation"
 import NewsReader from "./components/NewsReader"
 
 const App = () => {
+  const [newsArticles, setNewsArticles] = useState()
+  const url = ''
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        setNewsArticles(res)
+      })
+  })
+
+
 	return <div>
     <header>
       <Navigation />
