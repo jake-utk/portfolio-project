@@ -6,28 +6,34 @@ import NewsReader from "./components/NewsReader";
 
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
-	const url = `https://hn.algolia.com/api/v1/search?query=`; // review API docs indepth
+	const url = `https://hn.algolia.com/api/v1/search?query=react`;
 	useEffect(() => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-        console.log('json object: ', res);
-        setNewsArticles(res.hits)
+				console.log("json object: ", res);
+				setNewsArticles(res.hits);
 			});
 	}, []);
 
 	return (
-		<div className="App">
+		<div className='App'>
 			<header>
 				<Navigation />
 			</header>
 			<main>
-        <Route 
-        path='/'
-        exactrender={() => {
-          return <NewsReader newsArticles={newsArticles} setNewsArticles={setNewsArticles} />
-
-        }} />
+				<Route
+					path='/'
+					exact
+					render={() => {
+						return (
+							<NewsReader
+								newsArticles={newsArticles}
+								setNewsArticles={setNewsArticles}
+							/>
+						);
+					}}
+				/>
 			</main>
 		</div>
 	);
