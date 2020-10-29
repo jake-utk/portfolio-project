@@ -4,11 +4,11 @@ const NewsArticle = ({ article }) => {
 	console.log("should be single index of res.hits", article);
 	return (
 		<div className='newsarticle'>
-			<h2 className='title'>{article.title}</h2>
-			<h3 className='author'>Author: {article.author}</h3>
-			<h3 className='url'>
+			<h3 className='title'>{article.title}</h3>
+			<h4 className='author'>Author: {article.author}</h4>
+			<h4 className='url'>
 				<a href={article.url}>Link to Article </a>
-			</h3>
+			</h4>
 		</div>
 	);
 };
