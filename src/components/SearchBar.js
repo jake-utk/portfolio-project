@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 
-const SearchBar = ({
-	newsArticles,
-	setNewsArticles,
-	queryTerm,
-	setQueryTerm,
-}) => {
-	const [searchInput, setSearchInput] = useState('');
+const SearchBar = ({ setNewsArticles, setQueryTerm }) => {
+	const [searchInput, setSearchInput] = useState("");
 
 	let handleClick = (event) => {
 		event.preventDefault();
@@ -21,7 +16,7 @@ const SearchBar = ({
 	};
 
 	let handleChange = (event) => {
-		setSearchInput(event.target.value)
+		setSearchInput(event.target.value);
 	};
 
 	let handleSubmit = (event) => {
@@ -31,8 +26,9 @@ const SearchBar = ({
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
+				setQueryTerm(searchInput)
 				setNewsArticles(res.hits);
-				setSearchInput('');
+				setSearchInput("");
 			});
 	};
 
@@ -40,7 +36,7 @@ const SearchBar = ({
 		<div>
 			<form id='searchbar' onSubmit={handleSubmit}>
 				<label>initiate a query => </label>
-				<input type='text' value={searchInput} onChange={handleChange}/>
+				<input type='text' value={searchInput} onChange={handleChange} />
 				<button>Search</button>
 			</form>
 			<form id='buttons'>
