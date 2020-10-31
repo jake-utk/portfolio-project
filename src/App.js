@@ -22,13 +22,17 @@ const App = () => {
 			.catch(console.error);
 	}, []);
 
+	if (!newsArticles) {
+		return <h1>Loading...</h1>
+	}
+
 	return (
 		<div className='App'>
 			<header>
 				<Navigation queryTerm={queryTerm} />
 			</header>
 			<main>
-				<SearchBar />
+				<SearchBar newsArticles={newsArticles} setNewsArticles={setNewsArticles} />
 				<Route
 					path='/'
 					exact

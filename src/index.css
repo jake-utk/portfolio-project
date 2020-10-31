@@ -1,3 +1,5 @@
+/* @import url('fonts.googleaplis.com/css....') */
+
 body {
   background-image: url('https://previews.123rf.com/images/korolyok/korolyok1809/korolyok180900038/107927849-old-crumpled-grunge-recycled-newspaper-paper-texture-background-blurred-vintage-newspaper-horizontal.jpg');
   background-repeat: no-repeat;
@@ -8,4 +10,23 @@ body {
   font-weight: bold;
   display: grid;
   font-family: 'Syne Mono', monospace;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+header {
+  background-color: wheat;
+  color: black;
+  padding: 1rem;
+}
+
+form {
+  background-color: gray;
+}
+
+.newsArticle {
+  background-color: white;
 }
