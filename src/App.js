@@ -10,7 +10,7 @@ const App = () => {
   let queryTerm = '';
 
 	useEffect(() => {
-		let queryTerm = `react`;
+		let queryTerm = `today in technology`;
 		const url = `https://hn.algolia.com/api/v1/search?query=${queryTerm}`;
 
 		fetch(url)

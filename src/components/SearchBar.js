@@ -25,6 +25,7 @@ const SearchBar = ({ newsArticles, setNewsArticles }) => {
 				<label>Search Hacker News:</label>
 				<input></input>
 			</form>
+			<button onClick={handleClick} id='today in technology'>today in technology</button>
 			<button onClick={handleClick} id='react'>
 				react
 			</button>
