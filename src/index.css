@@ -1,11 +1,36 @@
+/* @import url('fonts.googleaplis.com/css....') */
+
 body {
-  /* I just did this so i didn't have to look at a white screen for hours */
-  background-image: url('https://i1.wp.com/travelwithme247blog.com/wp-content/uploads/2020/05/Sunset-Hin-Kong-Beach-Koh-Phangan_Veronika-TravelGeekery.jpg?resize=940%2C705&ssl=1');
+  background-image: url('https://previews.123rf.com/images/korolyok/korolyok1809/korolyok180900038/107927849-old-crumpled-grunge-recycled-newspaper-paper-texture-background-blurred-vintage-newspaper-horizontal.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color: white;
+  color: black;
   font-size: 30px;
   font-weight: bold;
   display: grid;
+  font-family: 'Syne Mono', monospace;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+header {
+  background-color: wheat;
+  color: black;
+  padding: 1rem;
+}
+
+form {
+  background-color: gray;
+}
+
+.newsArticle {
+  background-color: white;
+  border: thick;
+  border-color: black;
+  border-width: thick;
+  box-shadow: -1px 1px;
 }
