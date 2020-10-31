@@ -1,12 +1,8 @@
 import React from "react";
 
 const NewsArticle = ({ article }) => {
-	// console.log("should be single index of res.hits", article);
-	// console.log('TITLE: ', article.title);
-	// console.log('STORY_TEXT: ', article.story_text);
 
 	if (article.url == null || article.title == null) {
-		// console.log('NO STORY TEXT');
 		return null;
 	} else {
 		return (

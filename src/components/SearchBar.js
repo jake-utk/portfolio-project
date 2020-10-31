@@ -6,8 +6,7 @@ const SearchBar = ({
 	queryTerm,
 	setQueryTerm,
 }) => {
-	const emptySearch = "";
-	const [searchInput, setSearchInput] = useState(emptySearch);
+	const [searchInput, setSearchInput] = useState('');
 
 	let handleClick = (event) => {
 		event.preventDefault();
@@ -16,38 +15,32 @@ const SearchBar = ({
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log("json object: ", res);
 				setNewsArticles(res.hits);
 				setQueryTerm(event.target.id);
 			});
 	};
 
 	let handleChange = (event) => {
-		event.preventDefault();
-		console.log(event.target.value);
-		// setNewsArticles(event.target.value)
+		setSearchInput(event.target.value)
 	};
 
 	let handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(event.target.value);
-		// let newSearch = event.value
 		const url = `https://hn.algolia.com/api/v1/search?query=${searchInput}`;
 
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log("json object: ", res);
 				setNewsArticles(res.hits);
-				setSearchInput(emptySearch);
+				setSearchInput('');
 			});
 	};
 
 	return (
 		<div>
-			<form id='searchbar'>
+			<form id='searchbar' onSubmit={handleSubmit}>
 				<label>initiate a query => </label>
-				<input type='text' onSubmit={handleSubmit}></input>
+				<input type='text' value={searchInput} onChange={handleChange}/>
 				<button>Search</button>
 			</form>
 			<form id='buttons'>

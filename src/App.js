@@ -15,7 +15,6 @@ const App = () => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log(res.hits);
 				setNewsArticles(res.hits);
 			})
 			.catch(console.error);
