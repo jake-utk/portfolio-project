@@ -29,4 +29,8 @@ form {
 
 .newsArticle {
   background-color: white;
+  border: thick;
+  border-color: black;
+  border-width: thick;
+  box-shadow: -1px 1px;
 }
