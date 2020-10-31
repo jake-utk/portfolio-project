@@ -1,36 +1,68 @@
-/* @import url('fonts.googleaplis.com/css....') */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Orbitron&display=swap');
 
 body {
-  background-image: url('https://previews.123rf.com/images/korolyok/korolyok1809/korolyok180900038/107927849-old-crumpled-grunge-recycled-newspaper-paper-texture-background-blurred-vintage-newspaper-horizontal.jpg');
+  /* background-image: url('https://previews.123rf.com/images/korolyok/korolyok1809/korolyok180900038/107927849-old-crumpled-grunge-recycled-newspaper-paper-texture-background-blurred-vintage-newspaper-horizontal.jpg'); */
+  background-color: #0D0208;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color: black;
+  border-color: #003B00;
+  color: #00FF41;
   font-size: 30px;
   font-weight: bold;
   display: grid;
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Orbitron', sans-serif;
 }
 
 h1 {
   font-weight: 300;
   margin: 0;
+  box-shadow: -10px 10px;
+  font-family: 'Press Start 2P', cursive;
+  color: #008F11;
 }
 
 header {
-  background-color: wheat;
-  color: black;
+  /* background-color: black; */
+  color: #0D0208;
   padding: 1rem;
 }
 
 form {
-  background-color: gray;
+  /* background-color: black; */
+  border-color: #003B00;
+}
+
+nav {
+  padding-top: 1rem;
 }
 
 .newsArticle {
-  background-color: white;
+  /* background-color: black; */
   border: thick;
-  border-color: black;
+  border-color: #003B00;
   border-width: thick;
-  box-shadow: -1px 1px;
+  box-shadow: -10px 10px;
+}
+
+#author {
+  font-size: 20px;
+}
+
+#date {
+  font-size: 20px;
+}
+
+#title {
+  font-size: 26px;
+}
+
+#storytext {
+  font-size: 18px;
+}
+
+#url {
+  font-size: 18px;
 }

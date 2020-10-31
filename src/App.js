@@ -7,16 +7,15 @@ import SearchBar from "./components/SearchBar"
 
 const App = () => {
   const [newsArticles, setNewsArticles] = useState([]);
-  let queryTerm = '';
+  const [queryTerm, setQueryTerm] = useState('2020');
 
 	useEffect(() => {
-		let queryTerm = `today in technology`;
 		const url = `https://hn.algolia.com/api/v1/search?query=${queryTerm}`;
 
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log("json object: ", res);
+				console.log(res.hits);
 				setNewsArticles(res.hits);
 			})
 			.catch(console.error);
@@ -29,10 +28,10 @@ const App = () => {
 	return (
 		<div className='App'>
 			<header>
-				<Navigation queryTerm={queryTerm} />
+				<Navigation />
 			</header>
 			<main>
-				<SearchBar newsArticles={newsArticles} setNewsArticles={setNewsArticles} />
+				<SearchBar newsArticles={newsArticles} setNewsArticles={setNewsArticles} queryTerm={queryTerm} setQueryTerm={setQueryTerm} />
 				<Route
 					path='/'
 					exact
@@ -41,6 +40,7 @@ const App = () => {
 							<NewsReader
 								newsArticles={newsArticles}
 								setNewsArticles={setNewsArticles}
+								queryTerm={queryTerm}
 							/>
 						);
 					}}

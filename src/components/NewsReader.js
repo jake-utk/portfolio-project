@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NewsArticle from './NewsArticle'
 
-const NewsReader = ({ newsArticles, setNewsArticles }) => {
-    const [titlebar, setTitlebar] = useState('...')
+const NewsReader = ({ newsArticles, setNewsArticles, queryTerm }) => {
 
-    console.log('should be res.hits', newsArticles);
     return (
         <div className="newsreader">
-            <p>Searching for {titlebar}</p>
+            <p>current query( {queryTerm} )</p>
             {newsArticles.map((article) => <NewsArticle key={article.objectID} article={article} />)}
         </div>
     );

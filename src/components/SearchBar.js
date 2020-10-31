@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SearchBar = ({ newsArticles, setNewsArticles }) => {
-
-	// fetch call here for search bar INSTEAD of trying to 
-	// amend the "queryTerm" in App.js.  Eventually will
-	// probably only have the query const here.  
+const SearchBar = ({ newsArticles, setNewsArticles, queryTerm, setQueryTerm }) => {
+	const emptySearch = ''
+	const [searchInput, setSearchInput] = useState(emptySearch)
 
 	let handleClick = (event) => {
 		event.preventDefault();
-		console.log(event.target.id);
 		const url = `https://hn.algolia.com/api/v1/search?query=${event.target.id}`;
 
 		fetch(url)
@@ -16,16 +13,42 @@ const SearchBar = ({ newsArticles, setNewsArticles }) => {
 			.then((res) => {
 				console.log("json object: ", res);
 				setNewsArticles(res.hits)
+				setQueryTerm(event.target.id)
+				
 			})
 	};
 
+	let handleChange = (event) => {
+		event.preventDefault()
+		console.log(event.target.value);
+		// setNewsArticles(event.target.value)
+	}
+
+	let handleSubmit = (event) => {
+		event.preventDefault();
+		console.log(event.target.value);
+		// let newSearch = event.value
+		const url = `https://hn.algolia.com/api/v1/search?query=${searchInput}`;
+
+		fetch(url)
+			.then((res) => res.json())
+			.then((res) => {
+				console.log("json object: ", res);
+				setNewsArticles(res.hits)
+				setSearchInput(emptySearch)
+			})
+	}
+
 	return (
 		<div>
-			<form id="searchbar">
-				<label>Search Hacker News:</label>
-				<input></input>
+			<form id='searchbar'>
+				<label>submit a query:</label>
+				<input type='text' onSubmit={handleSubmit}></input>
+				<button>Search</button>
 			</form>
-			<button onClick={handleClick} id='today in technology'>today in technology</button>
+			<button onClick={handleClick} id='today in technology'>
+				today in technology
+			</button>
 			<button onClick={handleClick} id='react'>
 				react
 			</button>
