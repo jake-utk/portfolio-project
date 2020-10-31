@@ -1,36 +1,106 @@
-/* @import url('fonts.googleaplis.com/css....') */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Orbitron&display=swap");
+
+/* 
+Matrix color scheme:
+#0D0208 black
+#003B00 dark green
+#008F11 medium green
+#00FF41 light green
+*/
 
 body {
-  background-image: url('https://previews.123rf.com/images/korolyok/korolyok1809/korolyok180900038/107927849-old-crumpled-grunge-recycled-newspaper-paper-texture-background-blurred-vintage-newspaper-horizontal.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  color: black;
-  font-size: 30px;
-  font-weight: bold;
-  display: grid;
-  font-family: 'Syne Mono', monospace;
+	/* background-image: url('https://previews.123rf.com/images/korolyok/korolyok1809/korolyok180900038/107927849-old-crumpled-grunge-recycled-newspaper-paper-texture-background-blurred-vintage-newspaper-horizontal.jpg'); */
+	background-color: #0d0208;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	border-color: #003b00;
+	color: #00ff41;
+	font-size: 30px;
+	font-weight: bold;
+	display: grid;
+	font-family: "Orbitron", sans-serif;
 }
 
 h1 {
-  font-weight: 300;
-  margin: 0;
+	font-weight: 300;
+	margin: 0;
+	box-shadow: -10px 10px;
+	font-family: "Press Start 2P", cursive;
+	color: white;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
 }
 
 header {
-  background-color: wheat;
-  color: black;
-  padding: 1rem;
+	/* background-color: black; */
+	color: #0d0208;
+	padding: 1rem;
 }
 
-form {
-  background-color: gray;
+nav {
+	padding-top: 1rem;
+}
+
+.whitetext {
+	color: white;
+}
+
+.greentext {
+	color: #00ff41;
+}
+
+.purpletext {
+  color: plum;
 }
 
 .newsArticle {
-  background-color: white;
-  border: thick;
-  border-color: black;
-  border-width: thick;
-  box-shadow: -1px 1px;
+	/* background-color: black; */
+	border: thick;
+	border-color: #003b00;
+	border-width: thick;
+	color: white;
+	box-shadow: -10px 10px;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+}
+
+#author {
+	font-size: 20px;
+}
+
+#buttons {
+	border-color: #003b00;
+}
+
+#currentquery {
+	box-shadow: -10px 10px;
+	color: white;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+}
+
+#date {
+	font-size: 20px;
+}
+
+#searchbar {
+	/* background-color: black; */
+	border-color: #003b00;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+#title {
+	font-size: 26px;
+}
+
+#storytext {
+	font-size: 18px;
+}
+
+#url {
+	font-size: 18px;
 }

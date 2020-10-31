@@ -1,39 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SearchBar = ({ newsArticles, setNewsArticles }) => {
-
-	// fetch call here for search bar INSTEAD of trying to 
-	// amend the "queryTerm" in App.js.  Eventually will
-	// probably only have the query const here.  
+const SearchBar = ({ setNewsArticles, setQueryTerm }) => {
+	const [searchInput, setSearchInput] = useState("");
 
 	let handleClick = (event) => {
 		event.preventDefault();
-		console.log(event.target.id);
 		const url = `https://hn.algolia.com/api/v1/search?query=${event.target.id}`;
 
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log("json object: ", res);
-				setNewsArticles(res.hits)
-			})
+				setNewsArticles(res.hits);
+				setQueryTerm(event.target.id);
+			});
+	};
+
+	let handleChange = (event) => {
+		setSearchInput(event.target.value);
+	};
+
+	let handleSubmit = (event) => {
+		event.preventDefault();
+		const url = `https://hn.algolia.com/api/v1/search?query=${searchInput}`;
+
+		fetch(url)
+			.then((res) => res.json())
+			.then((res) => {
+				setQueryTerm(searchInput)
+				setNewsArticles(res.hits);
+				setSearchInput("");
+			});
 	};
 
 	return (
 		<div>
-			<form id="searchbar">
-				<label>Search Hacker News:</label>
-				<input></input>
+			<form id='searchbar' onSubmit={handleSubmit}>
+				<label>initiate a query => </label>
+				<input type='text' value={searchInput} onChange={handleChange} />
+				<button>Search</button>
 			</form>
-			<button onClick={handleClick} id='react'>
-				react
-			</button>
-			<button onClick={handleClick} id='javascript'>
-				javascript
-			</button>
-			<button onClick={handleClick} id='css'>
-				css
-			</button>
+			<form id='buttons'>
+				<label>starter queries => </label>
+				<button onClick={handleClick} id='today in technology'>
+					today in technology
+				</button>
+				<button onClick={handleClick} id='react'>
+					react
+				</button>
+				<button onClick={handleClick} id='javascript'>
+					javascript
+				</button>
+				<button onClick={handleClick} id='css'>
+					css
+				</button>
+			</form>
 		</div>
 	);
 };

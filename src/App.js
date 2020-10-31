@@ -3,36 +3,37 @@ import { Route } from "react-router-dom";
 import "./index.css";
 import Navigation from "./components/Navigation";
 import NewsReader from "./components/NewsReader";
-import SearchBar from "./components/SearchBar"
+import SearchBar from "./components/SearchBar";
 
 const App = () => {
-  const [newsArticles, setNewsArticles] = useState([]);
-  let queryTerm = '';
+	const [newsArticles, setNewsArticles] = useState([]);
+	const [queryTerm, setQueryTerm] = useState("2020");
 
 	useEffect(() => {
-		let queryTerm = `react`;
 		const url = `https://hn.algolia.com/api/v1/search?query=${queryTerm}`;
 
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log("json object: ", res);
 				setNewsArticles(res.hits);
 			})
 			.catch(console.error);
 	}, []);
 
 	if (!newsArticles) {
-		return <h1>Loading...</h1>
+		return <h1>Loading...</h1>;
 	}
 
 	return (
 		<div className='App'>
 			<header>
-				<Navigation queryTerm={queryTerm} />
+				<Navigation />
 			</header>
 			<main>
-				<SearchBar newsArticles={newsArticles} setNewsArticles={setNewsArticles} />
+				<SearchBar
+					setNewsArticles={setNewsArticles}
+					setQueryTerm={setQueryTerm}
+				/>
 				<Route
 					path='/'
 					exact
@@ -40,7 +41,7 @@ const App = () => {
 						return (
 							<NewsReader
 								newsArticles={newsArticles}
-								setNewsArticles={setNewsArticles}
+								queryTerm={queryTerm}
 							/>
 						);
 					}}
