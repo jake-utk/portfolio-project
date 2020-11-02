@@ -6,7 +6,7 @@
 
 ## Project Link
 
-- To go here...
+- http://querytech.herokuapp.com/
 
 ## Big Notes
 
@@ -50,11 +50,10 @@
 
 - Fork Repo
 - Clone it
-- To contribute please make pull request!
 
-## Embedded App Screenshot
+## Contribution Guidelines
 
-- TBD
+- - To contribute please make pull request!
 
 ## Unsolved Problems, Major Hurdles, and Reflections Along the Way...
 
